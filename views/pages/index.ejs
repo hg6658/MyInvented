@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>
+            My page
+        </title>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">  
+        <link rel="stylesheet" type="text/css" href="/css/style.css"/>  
+    </head>
+
+    <body>
+        <main id="layout-main"> 
+            <% if(message){ %>
+            <%- include('../partials/home',{
+                message:message,
+                headers:headers,
+                excelData:excelData
+            });%>
+            <%}else{%>
+                <% var message = undefined; var headers =[]; var excelData = []%>
+                <%- include('../partials/home',{message,headers,excelData});%>  
+            <%}%>    
+        </main>     
+        <script src="/Js/index.js"></script> 
+    </body>
+</html>

@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
+
+
+#containerUpload {
+  font-family: "Open Sans", sans-serif;
+  font-size: var(--container-font-size);
+  background-color: ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  width: 90vw;
+  height: 40%;
+  margin: auto;
+  border: 3px solid black;
+
+}
+
+
+#excelTable{
+  width: 90vw;
+  min-height: 55%;
+  margin: 10px auto;
+  border: 3px solid black;
+}

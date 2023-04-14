@@ -1,0 +1,25 @@
+<div id="containerUpload">
+    <form id="csvfileUpload" action="/uploadedCSV" method="post" enctype="multipart/form-data">
+      <input class="form-control" id="csvFile" type="file" name="csvFile">
+      <br/>
+      <button class="btn btn-primary" type="submit" id="uploadCSV" name="uploadCSV">UPLOAD</button>
+    </form>
+</div>
+<div id="excelTable">
+  <%if(message){%>
+  <table style="width:100%">
+    <tr>
+  <% for (header of headers) { %>    
+      <th><%= header %></th>
+    <%}%>  
+    </tr>
+  <% for (datum of excelData){ %> 
+    <tr>
+    <% for (header of headers) { %>
+      <td><%= datum[header] %></td>
+    <%}%>  
+    </tr>  
+  <%}%>  
+  </table>
+  <%}%>  
+</div>
